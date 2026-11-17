@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corvit Systems Peshawar | IT Training in Networking, Cyber Security and Cloud</title>
+<meta name="description" content="IT training institute in Peshawar for Cisco networking, cyber security, cloud computing, web and AI development, data science and freelancing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { navy: '#0a1f44', royal: '#1d4ed8' },
+  fontFamily: { sans: ['Sora', 'system-ui', 'sans-serif'] }
+} } };
+</script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  :focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; }
+  #msgs .m { max-width: 88%; padding: .6rem .8rem; border-radius: .9rem; font-size: .875rem; line-height: 1.5; word-wrap: break-word; }
+  #msgs .user { align-self: flex-end; background: #1d4ed8; color: #fff; border-bottom-right-radius: .25rem; }
+  #msgs .bot { align-self: flex-start; background: #fff; color: #0f172a; border: 1px solid #e2e8f0; border-bottom-left-radius: .25rem; }
+  #msgs .err { background: #fef2f2; border-color: #fecaca; color: #991b1b; }
+  #msgs .bot p + p, #msgs .bot p + ul, #msgs .bot p + ol, #msgs .bot ul + p, #msgs .bot ol + p { margin-top: .5rem; }
+  #msgs .bot ul { list-style: disc; padding-left: 1.2rem; }
+  #msgs .bot ol { list-style: decimal; padding-left: 1.2rem; }
+  #msgs .bot a { color: #1d4ed8; text-decoration: underline; }
+  #msgs .bot code { background: #f1f5f9; padding: 0 .25rem; border-radius: .25rem; font-size: .8rem; }
+  .dots span { display: inline-block; width: .45rem; height: .45rem; margin: 0 .12rem; border-radius: 50%; background: #64748b; animation: blink 1.2s infinite; }
+  .dots span:nth-child(2) { animation-delay: .2s; }
+  .dots span:nth-child(3) { animation-delay: .4s; }
+  @keyframes blink { 0%, 80%, 100% { opacity: .25; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+  @media (prefers-reduced-motion: reduce) { .dots span { animation: none; opacity: .6; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-40 bg-navy text-white border-b border-white/10">
+  <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4" aria-label="Main">
+    <a href="#top" class="flex items-center gap-2 font-bold">
+      <span class="grid place-items-center w-8 h-8 rounded-md bg-royal text-white">C</span>
+      <span>Corvit Systems Peshawar</span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-sm text-slate-200">
+      <a class="hover:text-white" href="#courses">Courses</a>
+      <a class="hover:text-white" href="#about">About</a>
+      <a class="hover:text-white" href="#admissions">Admissions</a>
+      <a class="hover:text-white" href="#contact">Contact</a>
+    </div>
+    <div class="flex items-center gap-2">
+      <button data-open-chat class="rounded-md bg-cyan-400 text-navy text-sm font-semibold px-3 py-2 hover:bg-cyan-300">Chat with AI Advisor</button>
+      <button id="menuBtn" class="md:hidden rounded-md border border-white/30 px-3 py-2 text-sm" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </nav>
+  <div id="menu" class="hidden md:hidden border-t border-white/10 px-4 py-2 text-sm flex-col">
+    <a class="block py-2" href="#courses">Courses</a>
+    <a class="block py-2" href="#about">About</a>
+    <a class="block py-2" href="#admissions">Admissions</a>
+    <a class="block py-2" href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="bg-navy text-white">
+  <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 class="text-3xl md:text-5xl font-bold leading-tight">Build an IT career in Peshawar with certifications employers recognise.</h1>
+      <p class="mt-5 text-slate-300 text-base md:text-lg max-w-xl leading-relaxed">Train in networking, cyber security, cloud and software development. Practise on real equipment, learn from certified instructors and prepare for global exams.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#courses" class="rounded-md bg-royal px-5 py-3 font-semibold hover:bg-blue-600">Explore Courses</a>
+        <button data-open-chat class="rounded-md border border-cyan-400 text-cyan-300 px-5 py-3 font-semibold hover:bg-cyan-400/10">Ask AI Course Advisor</button>
+      </div>
+    </div>
+    <div class="rounded-xl bg-slate-950 border border-white/10 shadow-2xl overflow-hidden" aria-hidden="true">
+      <div class="flex items-center gap-2 px-4 py-3 bg-slate-900 text-xs text-slate-400">
+        <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span><span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span><span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+        <span class="ml-2">Cisco lab: first router setup</span>
+      </div>
+<pre class="p-4 text-[13px] leading-6 text-cyan-200 overflow-x-auto font-mono">Router&gt; enable
+Router# configure terminal
+Router(config)# interface g0/0
+Router(config-if)# ip address 192.168.10.1 255.255.255.0
+Router(config-if)# no shutdown
+<span class="text-green-400">%LINK-5-CHANGED: Interface GigabitEthernet0/0,
+changed state to up</span></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Courses -->
+<section id="courses" class="py-16 md:py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-navy">Courses for every stage of an IT career</h2>
+    <p class="mt-3 text-slate-600 max-w-2xl">Pick a track, then ask our AI Advisor about fees, schedules and the course outline.</p>
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <article class="flex flex-col rounded-lg bg-slate-50 border border-slate-200 border-t-4 border-t-royal p-6">
+        <h3 class="font-semibold text-lg text-navy">Cisco Networking (CCNA / CCNP)</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Routing, switching, VLANs and network design, practised on real Cisco devices.</p>
+        <button data-ask="Tell me about the Cisco CCNA and CCNP networking course" class="mt-auto pt-5 text-left text-sm font-semibold text-royal hover:underline">Ask AI about this course</button>
+      </article>
+
+      <article class="flex flex-col rounded-lg bg-slate-50 border border-slate-200 border-t-4 border-t-royal p-6">
+        <h3 class="font-semibold text-lg text-navy">Cyber Security and Ethical Hacking</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Learn how attacks work and how to defend networks, systems and web applications.</p>
+        <button data-ask="Tell me about the Cyber Security and Ethical Hacking course" class="mt-auto pt-5 text-left text-sm font-semibold text-royal hover:underline">Ask AI about this course</button>
+      </article>
+
+      <article class="flex flex-col rounded-lg bg-slate-50 border border-slate-200 border-t-4 border-t-royal p-6">
+        <h3 class="font-semibold text-lg text-navy">Cloud Computing (AWS / Azure)</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Deploy and manage servers, storage and networks on the major cloud platforms.</p>
+        <button data-ask="Tell me about the Cloud Computing AWS and Azure course" class="mt-auto pt-5 text-left text-sm font-semibold text-royal hover:underline">Ask AI about this course</button>
+      </article>
+
+      <article class="flex flex-col rounded-lg bg-slate-50 border border-slate-200 border-t-4 border-t-royal p-6">
+        <h3 class="font-semibold text-lg text-navy">Full-Stack Web and AI Development</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Build complete web apps with HTML, CSS, JavaScript and back-end tools, and add AI features.</p>
+        <button data-ask="Tell me about the Full-Stack Web and AI Development course" class="mt-auto pt-5 text-left text-sm font-semibold text-royal hover:underline">Ask AI about this course</button>
+      </article>
+
+      <article class="flex flex-col rounded-lg bg-slate-50 border border-slate-200 border-t-4 border-t-royal p-6">
+        <h3 class="font-semibold text-lg text-navy">Data Science and Python</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Clean data, analyse it and build models using Python and its data libraries.</p>
+        <button data-ask="Tell me about the Data Science and Python course" class="mt-auto pt-5 text-left text-sm font-semibold text-royal hover:underline">Ask AI about this course</button>
+      </article>
+
+      <article class="flex flex-col rounded-lg bg-slate-50 border border-slate-200 border-t-4 border-t-royal p-6">
+        <h3 class="font-semibold text-lg text-navy">Digital Marketing and Freelancing</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Learn online marketing skills and how to find and manage freelance clients.</p>
+        <button data-ask="Tell me about the Digital Marketing and Freelancing course" class="mt-auto pt-5 text-left text-sm font-semibold text-royal hover:underline">Ask AI about this course</button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Why choose -->
+<section id="about" class="py-16 md:py-20 bg-slate-100">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-2">
+      <h2 class="text-2xl md:text-3xl font-bold text-navy">Why students choose Corvit Peshawar</h2>
+      <p class="mt-3 text-slate-600 leading-relaxed">We teach the skills the job market asks for, and we help you prove them with recognised certificates.</p>
+    </div>
+    <dl class="md:col-span-3 divide-y divide-slate-300">
+      <div class="py-5"><dt class="font-semibold text-navy">Hands-on labs</dt><dd class="mt-1 text-slate-600 text-sm leading-relaxed">Configure routers, secure networks and deploy cloud services yourself, not just watch slides.</dd></div>
+      <div class="py-5"><dt class="font-semibold text-navy">Certified instructors</dt><dd class="mt-1 text-slate-600 text-sm leading-relaxed">Learn from trainers who hold industry certifications and work with the technology they teach.</dd></div>
+      <div class="py-5"><dt class="font-semibold text-navy">Career counseling</dt><dd class="mt-1 text-slate-600 text-sm leading-relaxed">Get advice on choosing a track, building your CV and starting your job or freelance search.</dd></div>
+      <div class="py-5"><dt class="font-semibold text-navy">Global certification preparation</dt><dd class="mt-1 text-slate-600 text-sm leading-relaxed">Prepare for international exams from vendors such as Cisco, AWS and Microsoft.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- Admissions + AI advisor -->
+<section id="admissions" class="py-16 md:py-20">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold text-navy">How to get admission</h2>
+      <ol class="mt-6 space-y-5">
+        <li class="flex gap-4"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-royal text-white text-sm font-semibold">1</span><p class="text-slate-600 leading-relaxed"><strong class="text-navy">Choose a course.</strong> Read the course cards above or ask the AI Advisor to compare tracks.</p></li>
+        <li class="flex gap-4"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-royal text-white text-sm font-semibold">2</span><p class="text-slate-600 leading-relaxed"><strong class="text-navy">Check fees and timings.</strong> Ask the AI Advisor or visit the campus for the latest batch details.</p></li>
+        <li class="flex gap-4"><span class="shrink-0 grid place-items-center w-8 h-8 rounded-full bg-royal text-white text-sm font-semibold">3</span><p class="text-slate-600 leading-relaxed"><strong class="text-navy">Register at the campus.</strong> Bring your documents and complete the admission form.</p></li>
+      </ol>
+    </div>
+    <div class="rounded-xl bg-navy text-white p-7 self-start">
+      <h3 class="text-xl font-semibold">Ask the AI Advisor</h3>
+      <p class="mt-2 text-slate-300 text-sm leading-relaxed">Get quick answers about fees, schedules, admissions and course outlines. Tap a question to start.</p>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <button data-ask="What courses do you offer?" class="rounded-full border border-cyan-400/60 text-cyan-200 text-sm px-4 py-2 hover:bg-cyan-400/10">What courses do you offer?</button>
+        <button data-ask="What are the fees for your courses?" class="rounded-full border border-cyan-400/60 text-cyan-200 text-sm px-4 py-2 hover:bg-cyan-400/10">What are the fees?</button>
+        <button data-ask="How do I apply for admission?" class="rounded-full border border-cyan-400/60 text-cyan-200 text-sm px-4 py-2 hover:bg-cyan-400/10">How do I apply?</button>
+        <button data-ask="What are class timings?" class="rounded-full border border-cyan-400/60 text-cyan-200 text-sm px-4 py-2 hover:bg-cyan-400/10">What are class timings?</button>
+      </div>
+      <button data-open-chat class="mt-6 rounded-md bg-cyan-400 text-navy font-semibold px-5 py-3 hover:bg-cyan-300">Open the chat</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Campus info and footer -->
+<footer id="contact" class="bg-navy text-slate-300">
+  <div class="max-w-6xl mx-auto px-4 py-14 grid sm:grid-cols-2 md:grid-cols-3 gap-10 text-sm">
+    <div>
+      <p class="text-white font-bold text-lg">Corvit Systems Peshawar</p>
+      <p class="mt-3 leading-relaxed">IT training in networking, cyber security, cloud computing and software development.</p>
+    </div>
+    <div>
+      <p class="text-white font-semibold">Campus and contact</p>
+      <address class="mt-3 not-italic leading-7">
+        Corvit Systems Peshawar, Phase 3 Chowk,<br>
+        University Road, Peshawar, Pakistan<br>
+        Phone: <a class="hover:text-white" href="tel:+920000000000">+92 000 0000000</a><br>
+        Email: <a class="hover:text-white" href="mailto:info@example.com">info@example.com</a><br>
+        Hours: Monday to Saturday, 9:00 am to 6:00 pm
+      </address>
+    </div>
+    <div>
+      <p class="text-white font-semibold">Quick links</p>
+      <ul class="mt-3 space-y-2">
+        <li><a class="hover:text-white" href="#courses">Courses</a></li>
+        <li><a class="hover:text-white" href="#about">About</a></li>
+        <li><a class="hover:text-white" href="#admissions">Admissions</a></li>
+        <li><button data-open-chat class="hover:text-white">Chat with AI Advisor</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs text-slate-400">&copy; <span id="yr">2026</span> Corvit Systems Peshawar. All rights reserved.</div>
+</footer>
+
+<!-- Floating chat widget -->
+<button id="fab" data-open-chat class="fixed bottom-5 right-5 z-40 rounded-full bg-royal text-white px-5 py-3 font-semibold shadow-lg hover:bg-blue-600" aria-label="Open AI Advisor chat">Chat with us</button>
+
+<section id="chat" class="hidden fixed z-50 bottom-0 right-0 sm:bottom-5 sm:right-5 w-full sm:w-[390px] h-[85vh] sm:h-[600px] sm:max-h-[calc(100vh-2.5rem)] flex flex-col bg-slate-50 sm:rounded-2xl shadow-2xl border border-slate-200 overflow-hidden" role="dialog" aria-label="Corvit Peshawar AI Advisor">
+  <div class="flex items-center justify-between gap-2 bg-navy text-white px-4 py-3">
+    <div>
+      <p class="font-semibold leading-tight">Corvit Peshawar AI Advisor</p>
+      <p class="text-xs text-cyan-300">Ask about courses, fees and admissions</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="reset" class="rounded-md border border-white/30 text-xs px-2.5 py-1.5 hover:bg-white/10">New Chat</button>
+      <button id="close" class="rounded-md border border-white/30 text-xs px-2.5 py-1.5 hover:bg-white/10" aria-label="Close chat">Close</button>
+    </div>
+  </div>
+  <div id="msgs" class="flex-1 overflow-y-auto p-4 flex flex-col gap-3" aria-live="polite"></div>
+  <div id="chips" class="px-4 pb-3 flex flex-wrap gap-2"></div>
+  <div class="border-t border-slate-200 bg-white p-3 flex gap-2">
+    <input id="q" type="text" maxlength="1000" autocomplete="off" placeholder="Type your question..." aria-label="Your question" class="flex-1 rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-royal focus:outline-none">
+    <button id="send" class="rounded-md bg-royal text-white text-sm font-semibold px-4 py-2 hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed">Send</button>
+  </div>
+</section>
+
+<script>
+(function () {
+  var API = '/.netlify/functions/chat';
+  var $ = function (s) { return document.querySelector(s); };
+  var panel = $('#chat'), box = $('#msgs'), chips = $('#chips'), input = $('#q'), sendBtn = $('#send'), fab = $('#fab');
+  var cid = sessionStorage.getItem('corvit_cid') || '';
+  var uid = sessionStorage.getItem('corvit_uid');
+  if (!uid) { uid = 'corvit-' + Math.random().toString(36).slice(2, 10); sessionStorage.setItem('corvit_uid', uid); }
+  var busy = false;
+
+  var QUICK = ['What courses do you offer?', 'Tell me about CCNA & Networking', 'How do I apply for admission?', 'What are class timings?'];
+
+  $('#yr').textContent = new Date().getFullYear();
+
+  // Small, safe Markdown renderer: bold, italic, code, links, headings, bullet and numbered lists
+  function md(text) {
+    var esc = function (s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+    var inline = function (s) {
+      return esc(s)
+        .replace(/`([^`]+)`/g, '<code>$1</code>')
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>')
+        .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    };
+    var out = '', list = null, m;
+    var close = function () { if (list) { out += '</' + list + '>'; list = null; } };
+    text.split('\n').forEach(function (raw) {
+      var l = raw.trimEnd();
+      if ((m = l.match(/^\s*[-*\u2022]\s+(.*)/))) {
+        if (list !== 'ul') { close(); out += '<ul>'; list = 'ul'; }
+        out += '<li>' + inline(m[1]) + '</li>';
+      } else if ((m = l.match(/^\s*\d+[.)]\s+(.*)/))) {
+        if (list !== 'ol') { close(); out += '<ol>'; list = 'ol'; }
+        out += '<li>' + inline(m[1]) + '</li>';
+      } else if ((m = l.match(/^#{1,6}\s+(.*)/))) {
+        close(); out += '<p><strong>' + inline(m[1]) + '</strong></p>';
+      } else if (!l.trim()) {
+        close();
+      } else {
+        close(); out += '<p>' + inline(l) + '</p>';
+      }
+    });
+    close();
+    return out;
+  }
+
+  function add(cls, html, asText) {
+    var d = document.createElement('div');
+    d.className = 'm ' + cls;
+    if (asText) d.textContent = html; else d.innerHTML = html;
+    box.appendChild(d);
+    box.scrollTop = box.scrollHeight;
+    return d;
+  }
+
+  function welcome() {
+    add('bot', md('Assalam o Alaikum! I am the **Corvit Peshawar AI Advisor**.\n\nI can help you with:\n- Courses and course outlines\n- Fees and class schedules\n- Admission steps\n\nTap a question below or type your own.'));
+    chips.innerHTML = '';
+    chips.hidden = false;
+    QUICK.forEach(function (q) {
+      var b = document.createElement('button');
+      b.textContent = q;
+      b.className = 'rounded-full border border-royal/40 bg-white text-royal text-xs px-3 py-1.5 hover:bg-blue-50';
+      b.addEventListener('click', function () { ask(q); });
+      chips.appendChild(b);
+    });
+  }
+
+  function setBusy(v) { busy = v; sendBtn.disabled = v; input.disabled = v; }
+
+  function openChat() {
+    panel.classList.remove('hidden');
+    fab.classList.add('hidden');
+    input.focus();
+  }
+  function closeChat() {
+    panel.classList.add('hidden');
+    fab.classList.remove('hidden');
+  }
+
+  async function ask(text) {
+    text = (text || '').trim();
+    if (!text || busy) return;
+    openChat();
+    chips.hidden = true;
+    add('user', text, true);
+    input.value = '';
+    setBusy(true);
+    var typing = add('bot', '<span class="dots" aria-label="Typing"><span></span><span></span><span></span></span>');
+    try {
+      var res = await fetch(API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: text, conversation_id: cid, user: uid })
+      });
+      var data = await res.json().catch(function () { return {}; });
+      if (!res.ok) {
+        if (res.status === 404) { cid = ''; sessionStorage.removeItem('corvit_cid'); }
+        throw new Error(data.error || 'Request failed (HTTP ' + res.status + ').');
+      }
+      if (data.conversation_id) { cid = data.conversation_id; sessionStorage.setItem('corvit_cid', cid); }
+      typing.remove();
+      add('bot', md(data.answer || 'Sorry, I could not find an answer. Please try again.'));
+    } catch (err) {
+      typing.remove();
+      add('bot err', 'Sorry, something went wrong: ' + err.message, true);
+    }
+    setBusy(false);
+    input.focus();
+  }
+
+  function reset() {
+    cid = '';
+    sessionStorage.removeItem('corvit_cid');
+    box.innerHTML = '';
+    setBusy(false);
+    welcome();
+    input.focus();
+  }
+
+  sendBtn.addEventListener('click', function () { ask(input.value); });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); ask(input.value); }
+  });
+  $('#reset').addEventListener('click', reset);
+  $('#close').addEventListener('click', closeChat);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.classList.contains('hidden')) closeChat(); });
+
+  document.querySelectorAll('[data-open-chat]').forEach(function (el) { el.addEventListener('click', openChat); });
+  document.querySelectorAll('[data-ask]').forEach(function (el) {
+    el.addEventListener('click', function () { ask(el.getAttribute('data-ask')); });
+  });
+
+  var menuBtn = $('#menuBtn'), menu = $('#menu');
+  menuBtn.addEventListener('click', function () {
+    var open = menu.classList.toggle('hidden') === false;
+    menu.classList.toggle('flex', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { menu.classList.add('hidden'); menu.classList.remove('flex'); menuBtn.setAttribute('aria-expanded', 'false'); });
+  });
+
+  welcome();
+})();
+</script>
+</body>
+</html>
